@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2nd Month Anniversary, Princess!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Dancing Script -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the heart and text */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #1a1a1a; /* Dark black background */
+            overflow: hidden; /* Prevent scrollbars from the scattered text */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Styles for the scattered "I love you Princess" text */
+        .scattered-text-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 0; /* Send to back */
+            overflow: hidden; /* Contain text within the body */
+        }
+
+        .scattered-text {
+            position: absolute;
+            font-size: 1.8rem; /* Slightly larger size for better visibility */
+            color: #b91c1c; /* Darker, more visible red */
+            opacity: 0.25; /* Increased opacity for more visibility */
+            white-space: nowrap; /* Keep text on one line */
+            transform: rotate(-15deg); /* Slight rotation for effect */
+            animation: floatText 20s infinite ease-in-out alternate; /* Slower, more noticeable floating animation */
+        }
+
+        /* Animation for scattered text - more prominent floating */
+        @keyframes floatText {
+            0% { transform: translate(0, 0) rotate(-15deg); }
+            25% { transform: translate(20px, 30px) rotate(-10deg); }
+            50% { transform: translate(-15px, -20px) rotate(-20deg); }
+            75% { transform: translate(25px, -10px) rotate(-12deg); }
+            100% { transform: translate(0, 0) rotate(-15deg); }
+        }
+
+        /* Main Heart Container */
+        .main-heart-container {
+            position: relative;
+            width: 80vw; /* Responsive width */
+            max-width: 500px; /* Max width for larger screens */
+            aspect-ratio: 1 / 0.9; /* Maintain heart aspect ratio */
+            z-index: 10;
+            animation: subtleFloat 4s ease-in-out infinite alternate; /* Floating animation for the heart */
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)); /* Shadow for depth */
+        }
+
+        /* Heart SVG styling */
+        .main-heart-container svg {
+            width: 100%;
+            height: 100%;
+            fill: #8B0000; /* Wine red color for the heart */
+        }
+
+        /* Content inside the heart */
+        .heart-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%; /* Adjust content width inside heart */
+            text-align: center;
+            padding: 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart-content h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem; /* Adjust font size for h1 */
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #FFFF00; /* Yellow for contrast */
+        }
+
+        .heart-content p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem; /* Adjust font size for paragraphs */
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            color: #FFFF00; /* Yellow for contrast */
+        }
+
+        /* Small heart icon within the main heart */
+        .small-heart-icon {
+            width: 3rem; /* Size of the small heart */
+            height: 3rem;
+            fill: #FFFF00; /* Yellow for contrast */
+            margin-top: 1rem;
+            animation: beat 1.5s infinite; /* Keep the beating animation */
+        }
+
+        /* Animation for the main heart container to float */
+        @keyframes subtleFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Media queries for responsiveness */
+        @media (min-width: 768px) {
+            .heart-content h1 {
+                font-size: 3.5rem; /* Larger font size for h1 on desktop */
+            }
+            .heart-content p {
+                font-size: 2rem; /* Larger font size for paragraphs on desktop */
+            }
+            .small-heart-icon {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scattered "I love you Princess" text -->
+    <div class="scattered-text-container">
+        <!-- Using JavaScript to populate this for a more dynamic "all over" effect -->
+    </div>
+
+    <!-- Main content: Large Animated Wine Red Heart with Text Inside -->
+    <div class="main-heart-container">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <div class="heart-content">
+            <h1>Happy 2nd Month Anniversary, Princess!</h1>
+            <svg class="small-heart-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 1
